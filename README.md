@@ -26,9 +26,9 @@ This repository contains the automated literature search methodology aligned wit
 | File | Description |
 |------|-------------|
 | `literature_search_paper_aligned.py` | Main search script using OpenAlex API |
-| `ndt_restricted_612_results.csv` | Search results (CSV format) |
-| `ndt_restricted_612_references.bib` | BibTeX references |
-| `prisma_restricted_612.json` | PRISMA statistics with task breakdown |
+| `ndt_restricted_results.csv` | Search results (CSV format) |
+| `ndt_restricted_references.bib` | BibTeX references |
+| `prisma_restricted.json` | PRISMA statistics with task breakdown |
 | `NDT_Review_main.tex` | Main LaTeX paper |
 
 ## Installation
@@ -61,7 +61,7 @@ searcher = RestrictedPaperSearcher(email="YOUR_EMAIL@institution.edu")
 results = searcher.search(
     start_year=2014,
     end_year=2024,
-    max_pages_per_term=3  # Increase for more results
+    max_pages_per_term=4
 )
 ```
 
