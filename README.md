@@ -67,7 +67,9 @@ results = searcher.search(
 
 ## Search Methodology
 
-The search uses the [OpenAlex API](https://openalex.org/) with:
+The systematic search for the paper was conducted across **Scopus, Web of Science, and Engineering Village**. This repository provides a replication script using the [OpenAlex API](https://openalex.org/), which indexes content from multiple academic sources.
+
+The script uses:
 - **70 targeted search terms** covering all five assessment tasks
 - **Strict inclusion criteria**: Must mention NDT method + structural material + assessment task
 - **Exclusion filters**: Medical, food science, aerospace, automotive, and geoscience domains
