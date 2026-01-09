@@ -377,7 +377,7 @@ class RestrictedPaperSearcher:
         print(f"\n{'='*60}")
         print(f"FINAL COUNT: {len(self.results)} papers")
         print(f"EXCLUDED: {len(self.excluded)} papers")
-        print(f"TARGET: ~612 papers")
+        print(f"TARGET: papers")
         print(f"{'='*60}\n")
         
         return self.results
@@ -567,8 +567,7 @@ def main():
     ║  3. Deterioration assessment                                 ║
     ║  4. Defect identification                                    ║
     ║  5. Moisture condition                                       ║
-    ║                                                              ║
-    ║  Target: ~612 papers                                         ║
+    ║                                                              ║                                       ║
     ╚══════════════════════════════════════════════════════════════╝
     """)
     
@@ -577,14 +576,14 @@ def main():
     results = searcher.search(
         start_year=2014,
         end_year=2024,
-        max_pages_per_term=3  # Increased to reach ~612 target
+        max_pages_per_term=5, # Increased to reach ~612 target
     )
     
     searcher.print_summary()
     
     # Export with paper-aligned naming
-    searcher.export_to_csv("ndt_restricted_612_results.csv")
-    searcher.export_to_bibtex("ndt_restricted_612_references.bib")
+    searcher.export_to_csv("ndt_restricted_results.csv")
+    searcher.export_to_bibtex("ndt_restricted_references.bib")
     
     stats = searcher.generate_prisma_stats()
     with open("prisma_restricted_612.json", "w") as f:
